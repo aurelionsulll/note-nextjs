@@ -10,16 +10,16 @@
        <div className='max-w-md mx-auto bg-white rounded-xl shadow-md p-4'>
           {notes.map(note => {
             return (
-              <div Key={note._id}>
+              <div>
                 <div>
-                  <div className='container mx-auto'>
-                    <Link href={'/${note._id}'}>
-                      <a> { note.title } </a>
+                  <div className='container mx-auto flex'>
+                    <Link href={'/${note._id}'} className='flex-1'>
+                      <a className='mr-10'> { note.title } </a>
                     </Link>
-                    <Link href={'/${note._id}'}>
-                      <a className='bg-blue-500 text-white py-1 px-2 rounded-xl float-right mr-1'> View </a>
+                    <Link href={'/${note._id}'} className='flex-1'>
+                      <a className='bg-blue-500 text-white py-1 px-2 rounded-xl float-right mr-4'> View </a>
                     </Link>
-                    <Link href={'/${note._id}/edit'}>
+                    <Link href={'/${note._id}/edit'} className='flex-1'>
                       <a className='bg-green-500 text-white py-1 px-2 rounded-xl float-right mr-1'> Edit </a>
                     </Link>
                   </div>
